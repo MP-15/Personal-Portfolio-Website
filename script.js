@@ -31,11 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navItems.forEach((item, index) => {
         item.addEventListener('click', function() {
-            // Remove active class from all nav items
+            const targetSection = this.getAttribute('data-section');
+
+            // Remove active class from all nav items and sections
             navItems.forEach(nav => nav.classList.remove('active'));
-            
-            // Add active class to clicked item
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Add active class to clicked item and corresponding section
             this.classList.add('active');
+            const targetElement = document.getElementById(targetSection);
+            if (targetElement) {
+                targetElement.classList.add('active');
+            }
 
             // Close mobile menu if open
             if (window.innerWidth <= 768) {
@@ -97,26 +104,73 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll('.skill-item, .info-item, .contact-form').forEach(el => {
+    document.querySelectorAll('.skill-item, .info-item, .contact-form, .portfolio-item, .timeline-item, .cert-item, .education-item, .learning-item').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
 
+    // Progress bar animation
+    const progressBars = document.querySelectorAll('.progress-fill');
+    const progressObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target;
+                const width = progressBar.style.width;
+                progressBar.style.width = '0%';
+                setTimeout(() => {
+                    progressBar.style.width = width;
+                }, 200);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    progressBars.forEach(bar => {
+        progressObserver.observe(bar);
+    });
+
+    // Portfolio filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            // Update active filter button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter portfolio items
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+
     // Typing effect for profile title
     if (typeof Typed !== 'undefined') {
-        new Typed('.profile-title', {
-            strings: [
-                'DevOps Engineer',
-                'Cloud Engineer',
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: false
-        });
+        const profileTitleElement = document.querySelector('.profile-title');
+        if (profileTitleElement && !profileTitleElement.textContent.trim()) {
+            new Typed('.profile-title', {
+                strings: [
+                    'DevOps Engineer',
+                    'Cloud Engineer',
+                ],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 2000,
+                loop: true,
+                showCursor: false
+            });
+        }
     }
 
     // Floating animation for geometric shapes
@@ -125,15 +179,33 @@ document.addEventListener('DOMContentLoaded', function() {
         shape.style.animationDelay = `${index * -3}s`;
     });
 
-    // Add hover effects to skill items
+    // Add hover effects to skill items and portfolio items
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach(item => {
         item.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.05)';
         });
-        
+
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // Download CV functionality
+    const downloadBtn = document.querySelector('.download-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showNotification('CV download will be available soon!', 'info');
+        });
+    }
+
+    // Portfolio external links
+    const portfolioLinks = document.querySelectorAll('.portfolio-link, .portfolio-github');
+    portfolioLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showNotification('Project links will be added soon!', 'info');
         });
     });
 
@@ -190,7 +262,7 @@ function showNotification(message, type = 'info') {
 window.addEventListener('load', function() {
     // Remove loading states if any
     document.body.classList.add('loaded');
-    
+
     // Initialize any additional animations
     const elementsToAnimate = document.querySelectorAll('.profile-section, .contact-info, .sidebar-nav');
     elementsToAnimate.forEach((el, index) => {
@@ -199,6 +271,12 @@ window.addEventListener('load', function() {
             el.style.transform = 'translateY(0)';
         }, index * 200);
     });
+
+    // Initialize default section
+    const defaultSection = document.getElementById('about');
+    if (defaultSection) {
+        defaultSection.classList.add('active');
+    }
 });
 
 // Add resize handler for responsive behavior
