@@ -108,10 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (typeof Typed !== 'undefined') {
         new Typed('.profile-title', {
             strings: [
-                'Cloud Computing Enthusiast',
                 'DevOps Engineer',
-                'Computer Science Student',
-                'AWS & Azure Certified'
+                'Cloud Engineer',
             ],
             typeSpeed: 50,
             backSpeed: 30,
