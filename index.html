@@ -58,19 +58,19 @@
         </div>
 
         <nav class="sidebar-nav">
-            <div class="nav-item active">
+            <div class="nav-item active" data-section="about">
                 <i class="fa-solid fa-user"></i>
                 <span>ABOUT</span>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" data-section="resume">
                 <i class="fa-solid fa-file-lines"></i>
                 <span>RESUME</span>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" data-section="portfolio">
                 <i class="fa-solid fa-briefcase"></i>
                 <span>PORTFOLIO</span>
             </div>
-            <div class="nav-item">
+            <div class="nav-item" data-section="education">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <span>EDUCATION</span>
             </div>
@@ -178,6 +178,447 @@
                     <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="content-section">
+            <h2 class="section-title">Resume</h2>
+            <div class="section-divider"></div>
+
+            <div class="resume-container">
+                <!-- Download Resume Button -->
+                <div class="resume-download">
+                    <a href="#" class="download-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Professional Experience
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Summer Intern</h4>
+                                <h5 class="company">Celebal Technologies</h5>
+                                <span class="duration">2023 - Present</span>
+                                <p class="job-description">
+                                    Working Under Cloud Infrastructure and Security Department. Hands-on experience with
+                                    cloud services, infrastructure provisioning, and security implementations.
+                                    Involved in real-world projects using AWS, Azure, and DevOps practices.
+                                </p>
+                                <div class="job-skills">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">Azure</span>
+                                    <span class="skill-tag">Cloud Security</span>
+                                    <span class="skill-tag">Infrastructure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-certificate"></i>
+                        Certifications
+                    </h3>
+
+                    <div class="certifications-grid">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-aws"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>AWS Certified Cloud Practitioner</h4>
+                                <p>Amazon Web Services</p>
+                                <span class="cert-year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-microsoft"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Microsoft Azure Fundamentals</h4>
+                                <p>Microsoft</p>
+                                <span class="cert-year">2023</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Google Cloud Associate</h4>
+                                <p>Google Cloud Platform</p>
+                                <span class="cert-year">2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-code"></i>
+                        Technical Skills
+                    </h3>
+
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <h4>Cloud Platforms</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Amazon Web Services (AWS)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Microsoft Azure</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Google Cloud Platform</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Java</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Python</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>DevOps & Tools</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Docker</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Jenkins</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Git/GitHub</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="content-section">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="section-divider"></div>
+
+            <p class="intro-text">
+                Here are some of my recent projects showcasing my skills in cloud computing, DevOps, and software development.
+            </p>
+
+            <div class="portfolio-container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="cloud">Cloud Computing</button>
+                    <button class="filter-btn" data-filter="devops">DevOps</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="cloud">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/00a8ff?text=AWS+Image+Recognition" alt="AWS Image Recognition Project">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>AWS Image Recognition System</h3>
+                            <p>Built an image recognition system using AWS services including EC2, S3, Lambda, and AWS Rekognition for automated image processing and analysis.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Lambda</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">Rekognition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="devops">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/43e97b?text=CI%2FCD+Pipeline" alt="CI/CD Pipeline Project">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Automated CI/CD Pipeline</h3>
+                            <p>Developed an automated deployment pipeline using Jenkins, Docker, and cloud services for seamless code integration and deployment.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Jenkins</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">CI/CD</span>
+                                <span class="tech-tag">DevOps</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="cloud">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/f093fb?text=Multi-Cloud+Architecture" alt="Multi-Cloud Architecture">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Multi-Cloud Infrastructure</h3>
+                            <p>Designed and implemented a multi-cloud architecture using AWS, Azure, and GCP for high availability and disaster recovery.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">GCP</span>
+                                <span class="tech-tag">Terraform</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/4facfe?text=Portfolio+Website" alt="Portfolio Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>Modern, responsive portfolio website built with HTML5, CSS3, and JavaScript featuring dark theme and smooth animations.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="devops">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/fa709a?text=Container+Orchestration" alt="Container Orchestration">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Microservices Architecture</h3>
+                            <p>Containerized microservices application with Docker and Kubernetes for scalable and maintainable cloud-native architecture.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">Microservices</span>
+                                <span class="tech-tag">Cloud Native</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="cloud">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/400x250/2a2a2a/667eea?text=Serverless+App" alt="Serverless Application">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-github">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Serverless Web Application</h3>
+                            <p>Built a serverless web application using AWS Lambda, API Gateway, and DynamoDB for cost-effective and scalable solution.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">API Gateway</span>
+                                <span class="tech-tag">DynamoDB</span>
+                                <span class="tech-tag">Serverless</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-divider"></div>
+
+            <div class="education-container">
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Bachelor of Technology (Honours)</h3>
+                                <span class="education-year">2021 - 2025</span>
+                            </div>
+                            <h4 class="university">University of Petroleum and Energy Studies (UPES), Dehradun</h4>
+                            <p class="degree-details">
+                                <strong>Major:</strong> Computer Science with Specialization in Cloud Computing and Virtualization Technology (CCVT)<br>
+                                <strong>Minor:</strong> DevOps<br>
+                                <strong>Additional:</strong> Exploratory in School of Business
+                            </p>
+
+                            <div class="coursework">
+                                <h5>Relevant Coursework:</h5>
+                                <div class="course-grid">
+                                    <span class="course-item">Cloud Computing Architecture</span>
+                                    <span class="course-item">DevOps and CI/CD</span>
+                                    <span class="course-item">Data Structures & Algorithms</span>
+                                    <span class="course-item">Database Management Systems</span>
+                                    <span class="course-item">Software Engineering</span>
+                                    <span class="course-item">Computer Networks</span>
+                                    <span class="course-item">Operating Systems</span>
+                                    <span class="course-item">Virtualization Technologies</span>
+                                    <span class="course-item">Container Orchestration</span>
+                                    <span class="course-item">Infrastructure as Code</span>
+                                    <span class="course-item">Cloud Security</span>
+                                    <span class="course-item">Microservices Architecture</span>
+                                </div>
+                            </div>
+
+                            <div class="achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Specialized in cutting-edge cloud technologies and DevOps practices</li>
+                                    <li>Hands-on experience with major cloud platforms (AWS, Azure, GCP)</li>
+                                    <li>Active participation in cloud computing and DevOps projects</li>
+                                    <li>Strong foundation in both technical and business aspects of technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Higher Secondary Education</h3>
+                                <span class="education-year">2019 - 2021</span>
+                            </div>
+                            <h4 class="university">Senior Secondary School</h4>
+                            <p class="degree-details">
+                                <strong>Stream:</strong> Science (Physics, Chemistry, Mathematics)<br>
+                                <strong>Focus:</strong> Mathematics and Computer Science
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Learning Section -->
+                <div class="additional-learning">
+                    <h3>Continuous Learning & Development</h3>
+                    <div class="learning-grid">
+                        <div class="learning-item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h4>Online Courses</h4>
+                            <p>Completed various online courses on cloud computing, DevOps, and modern web development technologies.</p>
+                        </div>
+
+                        <div class="learning-item">
+                            <i class="fa-solid fa-users"></i>
+                            <h4>Technical Communities</h4>
+                            <p>Active member of cloud computing and DevOps communities, participating in discussions and knowledge sharing.</p>
+                        </div>
+
+                        <div class="learning-item">
+                            <i class="fa-solid fa-trophy"></i>
+                            <h4>Hands-on Projects</h4>
+                            <p>Continuously working on personal and academic projects to apply theoretical knowledge in practical scenarios.</p>
+                        </div>
+
+                        <div class="learning-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h4>Industry Experience</h4>
+                            <p>Gaining real-world experience through internships and collaborations with industry professionals.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
