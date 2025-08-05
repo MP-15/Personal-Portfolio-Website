@@ -80,19 +80,42 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
             // Get form data
             const formData = new FormData(this);
-            const formObject = {};
-            formData.forEach((value, key) => {
-                formObject[key] = value;
-            });
 
-            // Show success message (you can implement actual form submission here)
-            showNotification('Message sent successfully!', 'success');
-            
-            // Reset form
-            this.reset();
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                    this.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showNotification('Failed to send message. Please try again or email me directly.', 'error');
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
         });
     }
 
