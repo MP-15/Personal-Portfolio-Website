@@ -257,12 +257,24 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
+    let bgColor;
+    switch(type) {
+        case 'success':
+            bgColor = '#43e97b';
+            break;
+        case 'error':
+            bgColor = '#ff6b6b';
+            break;
+        default:
+            bgColor = '#00a8ff';
+    }
+
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
-        background: ${type === 'success' ? '#43e97b' : '#00a8ff'};
+        background: ${bgColor};
         color: white;
         padding: 15px 25px;
         border-radius: 8px;
@@ -271,22 +283,26 @@ function showNotification(message, type = 'info') {
         transform: translateX(100%);
         transition: transform 0.3s ease;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        word-wrap: break-word;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     // Show notification
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Hide notification
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
         setTimeout(() => {
-            document.body.removeChild(notification);
+            if (document.body.contains(notification)) {
+                document.body.removeChild(notification);
+            }
         }, 300);
-    }, 3000);
+    }, 4000);
 }
 
 // Performance optimization
