@@ -886,6 +886,12 @@ body {
     justify-content: center;
     opacity: 0;
     transition: var(--transition);
+    pointer-events: none;
+}
+
+.portfolio-overlay.active,
+.portfolio-item:hover .portfolio-overlay {
+    pointer-events: auto;
 }
 
 .portfolio-item:hover .portfolio-overlay {
