@@ -242,14 +242,7 @@ Email: ${email}`);
         });
     }
 
-    // Portfolio external links
-    const portfolioLinks = document.querySelectorAll('.portfolio-link, .portfolio-github');
-    portfolioLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            showNotification('Project links will be added soon!', 'info');
-        });
-    });
+    // Portfolio external links - Now working with real project URLs
 
     // Add parallax effect to geometric shapes
     window.addEventListener('scroll', function() {
