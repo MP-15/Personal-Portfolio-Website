@@ -84,38 +84,49 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = this.querySelector('.submit-btn');
             const originalText = submitBtn.textContent;
 
-            // Show loading state
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
             // Get form data
             const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
 
-            // Submit to Formspree
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                    this.reset();
-                } else {
-                    throw new Error('Network response was not ok');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showNotification('Failed to send message. Please try again or email me directly.', 'error');
-            })
-            .finally(() => {
-                // Reset button state
+            // Show loading state
+            submitBtn.textContent = 'Processing...';
+            submitBtn.disabled = true;
+
+            // Create mailto link
+            const mailtoSubject = encodeURIComponent(`Portfolio Contact: ${subject}`);
+            const mailtoBody = encodeURIComponent(`Hello Mani,
+
+My name is ${name} and I would like to get in touch with you.
+
+Subject: ${subject}
+
+Message:
+${message}
+
+Best regards,
+${name}
+Email: ${email}`);
+
+            const mailtoLink = `mailto:mani.paliwal.orai@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+
+            // Try to open email client
+            try {
+                window.location.href = mailtoLink;
+                showNotification('Opening your email client... Please send the email to complete your message.', 'success');
+                this.reset();
+            } catch (error) {
+                console.error('Error opening email client:', error);
+                showNotification('Please email me directly at: mani.paliwal.orai@gmail.com', 'info');
+            }
+
+            // Reset button state
+            setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            });
+            }, 2000);
         });
     }
 
