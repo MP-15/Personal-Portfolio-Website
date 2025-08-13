@@ -242,13 +242,18 @@ Email: ${email}`);
         });
     }
 
-    // Portfolio external links - Ensure they work properly
+    // Portfolio external links - Force them to work by removing any blocking listeners
     const portfolioLinks = document.querySelectorAll('.portfolio-link');
     portfolioLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            console.log('Portfolio link clicked:', this.href);
-            // Let the default behavior happen (navigate to the URL)
-            // No preventDefault() here
+        // Remove any existing event listeners by cloning the element
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+
+        // Add our own click handler that forces navigation
+        newLink.addEventListener('click', function(e) {
+            e.stopPropagation();
+            console.log('Portfolio link clicked, navigating to:', this.href);
+            window.open(this.href, '_blank');
         });
     });
 
