@@ -915,6 +915,8 @@ body {
     justify-content: center;
     text-decoration: none;
     transition: var(--transition);
+    position: relative;
+    z-index: 10;
 }
 
 .portfolio-link:hover,
