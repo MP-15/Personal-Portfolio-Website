@@ -139,7 +139,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: 50% 30%;
-    rotate: 90;
+    rotate: 180deg;
     border: 3px solid var(--accent-color);
 }
 
