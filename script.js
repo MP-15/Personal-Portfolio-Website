@@ -242,7 +242,15 @@ Email: ${email}`);
         });
     }
 
-    // Portfolio external links - Now working with real project URLs
+    // Portfolio external links - Ensure they work properly
+    const portfolioLinks = document.querySelectorAll('.portfolio-link');
+    portfolioLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            console.log('Portfolio link clicked:', this.href);
+            // Let the default behavior happen (navigate to the URL)
+            // No preventDefault() here
+        });
+    });
 
     // Add parallax effect to geometric shapes
     window.addEventListener('scroll', function() {
