@@ -1,252 +1,688 @@
 <!DOCTYPE html>
-<html lang=" en">
-    <head>
-        <meta chartset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content=""IE=edge>
-        <meta name ="viewport" content ="width=device-width, initial-scale=1.0">
-        <!-- === CSS File -->
-        <link rel = "stylesheet" href="style.css">
-        <title>Personal Portfolio Website</title>
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mani Paliwal - Portfolio</title>
+</head>
+<body>
+    <!-- Geometric Background -->
+    <div class="geometric-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+    </div>
 
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="https://cdn.builder.io/api/v1/image/assets%2Fb0543ac8da2e44a1aa94c1f4503abf0e%2Fd3ed402321704b3ca0d2abc88fd98eec?format=webp&width=800" alt="Mani Paliwal">
+            </div>
+            <h1 class="profile-name">Mani Paliwal</h1>
+            <!--<p class="profile-title">Devops | Cloud Engineer</p>-->
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mani-paliwal-699a15206" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/MP-15" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:mani.paliwal.orai@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="tel:+918800159349">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </div>
+        </div>
 
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="label">EMAIL</span>
+                <a href="mailto:mani.paliwal.orai@gmail.com" class="value">mani.paliwal.orai@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="label">LOCATION</span>
+                <span class="value">India</span>
+            </div>
+        </div>
 
+        <nav class="sidebar-nav">
+            <div class="nav-item active" data-section="about">
+                <i class="fa-solid fa-user"></i>
+                <span>ABOUT</span>
+            </div>
+            <div class="nav-item" data-section="resume">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>RESUME</span>
+            </div>
+            <div class="nav-item" data-section="portfolio">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>PORTFOLIO</span>
+            </div>
+            <div class="nav-item" data-section="blog">
+                <i class="fa-solid fa-blog"></i>
+                <span>BLOG</span>
+            </div>
+            <div class="nav-item" data-section="education">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>EDUCATION</span>
+            </div>
+        </nav>
+    </aside>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- About Section -->
+        <section id="about" class="content-section active">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-divider"></div>
+            
+            <p class="intro-text">
+                Hi, I'm Mani Paliwal, a Software Engineer at Ethara AI with expertise in DevOps and cloud computing. I graduated from UPES Dehradun with BTech (Hons.) in Computer Science, majoring in Cloud Computing and Virtualization Technology (CCVT) and minor in DevOps, with additional exploration in International Business. My passion lies in cloud infrastructure, automation, and ensuring high-availability systems.
+            </p>
 
-        <!-- === Header Start=== -->
-        <header>
+            <div class="about-details">
+                <p class="detail-text">
+                    Currently at Ethara AI, I manage and monitor AWS-based cloud environments ensuring 24x7 uptime in production. I design and deploy CI/CD pipelines using AWS CodePipeline, integrate monitoring solutions like CloudWatch and Prometheus, and deploy microservices in Kubernetes clusters. I'm proficient in Python, Bash scripting, including backup strategies and performance tuning.
+                </p>
 
-            <!-- profile -->
-            <div class="profile">
-                <img src="m1.jpg" alt=""width="150px">
-                <h1>Mani Paliwal</h1>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/mani-paliwal-699a15206"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/MP-15"><i class="fa-brands fa-github"></i></a>
-                    
+                <div class="personal-info">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Birthday:</span>
+                            <span class="info-value">15 August 2002</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Degree:</span>
+                            <span class="info-value">BTech(H) Computer Science (Graduated)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Major/Minor:</span>
+                            <span class="info-value">Cloud Computing/DevOps</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Freelance:</span>
+                            <span class="info-value">Available</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <!-- NavBar -->
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa-solid fa-user"></i> About Me</a></li>
-                    <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-                </ul>
-            </nav>
-            
-
-
-
-
-
-            
-        </header>
-
-        <!-- Mobile Nav Toggle -->
-        <i class="fa-solid fa-bars" id="MenuBtn"></i>
-        <!-- === Header End === -->
-
-
-
-
-        <!-- ==== All Body Content ==== -->
-
-        <main>
-
-            <!-- == Home Section Start == -->
-            <section id="home">
-                <div class="home-row">
-                    <h1>Hi, This is <br>Mani Paliwal<span>.</span></h1>
-                    <p>I'm a  <span class="auto-input">Final year Student</span></p>
-                </div>
-            </section>
-
-            <!-- == Home Section End == -->
-
-
-            <!-- == About Section Start == -->
-            <section id="about">
-
-                <h1 class="sub-heading">About Me</h1>
-                <div class="divider"></div>
-                <p>Hi, I'm Mani Paliwal a final year student at UPES Dehradun. I'm currently pursuing BTech in Computer Science with major specialization in cloud computing and minor in DevOps. Also an exploratory in school of Business. I'm familiar with java and python and done projects in same. I'm currently learning web development and looking for projects in same. In my free time I love to do pencil sketching and doodling.</p>
-
-                <div class="about-col">
-                    <!-- img-col-->
-                    <div class="image-col">
-                        <img src="me22.jpg" alt="...">
-                        
+            <!-- Skills Section -->
+            <div class="skills-section">
+                <h3 class="skills-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
                     </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-aws"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-code-branch"></i>
+                        <span>CI/CD</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Monitoring</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-dharmachakra"></i>
+                        <span>Kubernetes</span>
+                    </div>
+                </div>
+            </div>
 
-                    <!--information-->
-                    <div class="info-col">
-                        <h2>Cloud Computing Enthusiast</h2>
-                        <p>Cloud Computing is my major. I've done hands-on with Amazon web services, Microsoft Azure, and Google Cloud Platform. I did a project based on Image recognition using AWS services where AWS EC2 instances, S3 Buckets, Lambda and AWS Rekognition were used. 
-I have DevOps as my minor and have knowledge of Docker, Jenkins, CI/CD Pipelines.
-Currently I'm working Under Cloud Infrastructure and Security Department of Celebal Technologies as a summer intern. </p>
-                        <div class="icon-list-col">
+            <!-- Contact Form -->
+            <div class="contact-section">
+                <h3 class="contact-title">Get In Touch</h3>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
 
-                            <!--left side list-->
-                            <div class="icon-list">
-                                <ul>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Birthday:</strong> <span>15 August 2002</span></li>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Age:</strong> <span>20</span></li>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Freelance</strong> <span>Available</span></li>
-                                    
-                                </ul>
+        <!-- Resume Section -->
+        <section id="resume" class="content-section">
+            <h2 class="section-title">Resume</h2>
+            <div class="section-divider"></div>
+
+            <div class="resume-container">
+                <!-- Download Resume Button -->
+                <div class="resume-download">
+                    <a href="#" class="download-btn">
+                        <i class="fa-solid fa-download"></i>
+                        Download CV
+                    </a>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-briefcase"></i>
+                        Professional Experience
+                    </h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Software Engineer</h4>
+                                <h5 class="company">Ethara AI (formerly Green Rider Technology)</h5>
+                                <span class="duration">Mar 2024 - Present</span>
+                                <p class="job-description">
+                                    Managing and monitoring AWS-based cloud environments, ensuring high availability and system uptime in production.
+                                    Designing and deploying CI/CD pipelines using AWS CodePipeline, CodeBuild, and CodeDeploy.
+                                    Integrating monitoring solutions with AWS CloudWatch, Prometheus, and ELK Stack for real-time monitoring and troubleshooting.
+                                </p>
+                                <div class="job-skills">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">CI/CD</span>
+                                    <span class="skill-tag">Kubernetes</span>
+                                    <span class="skill-tag">CloudWatch</span>
+                                    <span class="skill-tag">Prometheus</span>
+                                    <span class="skill-tag">ELK Stack</span>
+                                    <span class="skill-tag">Application Load Balancers</span>
+                                </div>
                             </div>
-
-                            <!--Right side list-->
-                            <div class="icon-list">
-                                <ul>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Degree:</strong> <span>BTech(H) Computer Science</span></li>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Major/Minor:</strong> <span>CCVT/DevOps</span></li>
-                                    <li><i class="fa-solid fa-angle-right"></i> <strong>Address:</strong> <span>Noida, Uttar Pradesh, India</span></li>
-                                </ul>
-                            </div>
-                                
                         </div>
 
-                    </div>
-
-                </div>
-            
-            </section>
-
-            <!-- == About Section Start == -->
-
-            <!-- ------------------------------------------------------------ -->
-
-            <!-- Skills SEction Start -->
-            <section id="Skills">
-
-                <h1 class="sub-heading">Skills</h1>
-                <div class="divider"></div>
-                <p class="sub-para"></p>
-                <div class="skill-row">
-                    <!-- Skill Box1-->
-                    <div class="skill-box">
-                        <i class="fa-regular fa-file-code"></i>
-                        <strong>Java</strong>
-                        <p></p>
-                    </div>
-
-                    <!-- Skill Box2-->
-
-                    <div class="skill-box">
-                        <i class="fa-regular fa-file-code"></i>
-                        <strong>GitHub</strong>
-                        <p></p>
-                    </div>
-
-                    <!-- Skill Box3-->
-
-                    <div class="skill-box">
-                        <i class="fa-regular fa-file-code"></i>
-                        <strong>Docker</strong>
-                        <p></p>
-                    </div>
-
-                    <!-- Skill Box4-->
-
-                    <div class="skill-box">
-                        <i class="fa-regular fa-file-code"></i>
-                        <strong>DevOps</strong>
-                        <p></p>
-                    </div>
-
-                    <!-- Skill Box5-->
-
-                    <div class="skill-box">
-                        <i class="fa-regular fa-file-code"></i>
-                        <strong>Aws/Azure</strong>
-                        <p></p>
-                    </div>
-
-                </div>
-                
-                
-            </section>
-
-            <!-- Skills Section End -->
-             
-            <!-- -------------------------------------------------------- -->
-
-            
-            <!-- Contact Section Start -->
-            <section id="contact">
-
-                <h1 class="sub-heading">Contact</h1>
-                <div class="divider"></div>
-                <p></p>
-
-                <div class="contact-row">
-                   
-                    <!-- Left Col -->
-                    <div class="contact-left">
-
-                        <!-- Emanil Box -->
-                        <div class="icon-box">
-                            <div class="icon-box">
-                                <i class="fa-solid fa-envelope"></i>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4 class="job-title">Summer Intern</h4>
+                                <h5 class="company">Celebal Technologies</h5>
+                                <span class="duration">Jun 2023 - Aug 2023</span>
+                                <p class="job-description">
+                                    Assisted in troubleshooting and resolving network and security issues in Azure cloud environments.
+                                    Implemented scalable network architectures using the hub-and-spoke model.
+                                    Implemented Azure security features including network security groups (NSGs) and virtual firewalls.
+                                </p>
+                                <div class="job-skills">
+                                    <span class="skill-tag">Azure</span>
+                                    <span class="skill-tag">Network Security</span>
+                                    <span class="skill-tag">Hub-Spoke Architecture</span>
+                                    <span class="skill-tag">NSGs</span>
+                                </div>
                             </div>
-                            <div class="info">
-                                <h4>Email:</h4>
-                                <p>mani.paliwal.orai@gmail.com</p>
-                            </div>
-                        </div> 
-                        
-                         <!-- Call Box -->
-                         <div class="icon-box">
-                            <div class="icon-box">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="info">
-                                <h4>Call:</h4>
-                                <p>+91 8800159349</p>
-    </div>
-</div>                         
-
+                        </div>
                     </div>
-
-                    <!-- Right Col -->
-                    <div class="contact-right">
-
-                        <form action="">
-
-                            <input type="text" name="name" placeholder="Your Name">
-                            <input type="email" name="email" id="email" placeholder="Your Email">
-                            <input type="text" name="subject" id="subject" placeholder="Subject">
-                            <textarea name="msg" id="msg" rows="9" placeholder="Your Message"></textarea>
-                            <input type="submit" value="Send Message">
-
-
-
-                        </form>
-                    </div>
-
                 </div>
 
+                <!-- Achievements Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-trophy"></i>
+                        Achievements
+                    </h3>
+
+                    <div class="certifications-grid">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-aws"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>AWS Academy Graduate Program</h4>
+                                <p>Amazon Web Services</p>
+                                <span class="cert-year">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Google Cloud Facilitator Program</h4>
+                                <p>Google Cloud Platform</p>
+                                <span class="cert-year">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-brands fa-google"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>Google Cloud Skill Boost Certifications</h4>
+                                <p>Google Cloud Platform</p>
+                                <span class="cert-year">2024</span>
+                            </div>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fa-solid fa-certificate"></i>
+                            </div>
+                            <div class="cert-details">
+                                <h4>PWC Launchpad Micro Certifications</h4>
+                                <p>IT Fundamentals, Data Engineering, Python, RDBMS</p>
+                                <span class="cert-year">2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills Section -->
+                <div class="resume-section">
+                    <h3 class="resume-section-title">
+                        <i class="fa-solid fa-code"></i>
+                        Technical Skills
+                    </h3>
+
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <h4>Cloud Platforms</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Amazon Web Services (EC2, IAM, CloudWatch, S3, CodePipeline)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Microsoft Azure (VNet, Gateways, Security Groups)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Google Cloud Platform (Firebase)</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Programming & Database</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Python</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Bash Scripting</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>SQL & Database Management</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Odoo Development</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 55%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>DevOps & Monitoring</h4>
+                            <div class="skill-progress">
+                                <div class="skill-item-resume">
+                                    <span>Docker & Kubernetes</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Jenkins & CI/CD</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Prometheus/Grafana/Signoz</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Git/GitHub Actions</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item-resume">
+                                    <span>Nginx & Load Balancers</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="content-section">
+            <h2 class="section-title">Portfolio</h2>
+            <div class="section-divider"></div>
+
+            <p class="intro-text">
+                Here are some of my recent projects showcasing my skills in cloud computing, DevOps, and software development.
+            </p>
+
+            <div class="portfolio-container">
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="serverless">
+                        <div class="portfolio-image">
+                            <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #B8860B, #DAA520); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; position: relative;">
+                                <i class="fa-solid fa-chart-line" style="font-size: 48px; margin-bottom: 15px;"></i>
+                                <h4 style="margin: 0; font-size: 18px; font-weight: 600;">MSME Analytics</h4>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; opacity: 0.9;">Business Intelligence Dashboard</p>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="https://portal.kuberha.ai/" target="_blank" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>MSME Dashboard</h3>
+                            <p>Architected a serverless backend for sales and billing analytics using AWS Lambda with REST endpoints through API Gateway. Integrated Razorpay payment gateway with secure token handling and implemented CloudWatch metrics, reducing latency and improving underwriting decision speed by 40%.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">API Gateway</span>
+                                <span class="tech-tag">RDS</span>
+                                <span class="tech-tag">Razorpay API</span>
+                                <span class="tech-tag">CloudWatch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="migration">
+                        <div class="portfolio-image">
+                            <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); display: flex; flex-direction: column; align-items: center; justify-content: center; color: #00d4ff; position: relative;">
+                                <i class="fa-solid fa-brain" style="font-size: 48px; margin-bottom: 15px;"></i>
+                                <h4 style="margin: 0; font-size: 18px; font-weight: 600;">Ethara.AI</h4>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; opacity: 0.9;">AI Data Infrastructure</p>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="https://www.ethara.ai/" target="_blank" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Ethara.ai Website Migration</h3>
+                            <p>Demonstrated proficiency in cloud applications by migrating the company website to AWS. Designed serverless applications using AWS Lambda for image processing with S3 and Rekognition, creating AI-powered solutions for object detection with percentage accuracy metrics.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS Amplify</span>
+                                <span class="tech-tag">Route 53</span>
+                                <span class="tech-tag">CloudFront</span>
+                                <span class="tech-tag">AWS Lambda</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">Rekognition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="deployment">
+                        <div class="portfolio-image">
+                            <div style="width: 100%; height: 100%; background: linear-gradient(135deg, #4a90c2, #5ba0d2); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; position: relative;">
+                                <i class="fa-solid fa-microphone" style="font-size: 48px; margin-bottom: 15px;"></i>
+                                <h4 style="margin: 0; font-size: 18px; font-weight: 600;">VoisSync</h4>
+                                <p style="margin: 5px 0 0 0; font-size: 12px; opacity: 0.9;">AI Voice Agent Platform</p>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="https://www.voissync.ai/" target="_blank" class="portfolio-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>Voissync.ai Platform Deployment</h3>
+                            <p>Built and deployed the AI voice agent marketing platform on AWS EC2 with Nginx reverse proxy for SSL termination and load balancing. Automated deployments with GitHub Actions for zero-downtime rollouts and configured global asset delivery with S3 + CloudFront.</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-tag">AWS EC2</span>
+                                <span class="tech-tag">Nginx</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                                <span class="tech-tag">S3</span>
+                                <span class="tech-tag">CloudFront</span>
+                                <span class="tech-tag">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
 
 
-            </section>
+                </div>
+            </div>
+        </section>
 
+        <!-- Blog Section -->
+        <section id="blog" class="content-section">
+            <h2 class="section-title">Blog</h2>
+            <div class="section-divider"></div>
 
-            <!-- Contact Section End -->
+            <p class="intro-text">
+                I write technical articles about cloud computing, DevOps, and web development.
+                Check out my latest posts covering AWS, deployment strategies, and best practices.
+            </p>
 
+            <div class="blog-container">
+                <div class="blog-grid">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-item">
+                        <div class="blog-image">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS Amplify Custom Domain Setup" style="background: linear-gradient(135deg, #ff6b35, #f7931e); padding: 40px; object-fit: contain;">
+                            <div class="blog-overlay">
+                                <div class="blog-actions">
+                                    <a href="https://cloudova.hashnode.dev/how-to-setup-a-custom-domain-in-amplify" target="_blank" class="blog-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <span class="blog-date">Dec 15, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>How to Setup a Custom Domain in Amplify</h3>
+                            <p>Learn how to configure and set up a custom domain for your AWS Amplify applications with step-by-step instructions and best practices.</p>
+                            <div class="blog-tech">
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Amplify</span>
+                                <span class="tech-tag">Domain</span>
+                                <span class="tech-tag">DNS</span>
+                            </div>
+                        </div>
+                    </article>
 
-        </main>
-        
-        <!--Typed.JS File (For Typing Effect) -->
-        <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+                    <!-- Blog Post 2 -->
+                    <article class="blog-item">
+                        <div class="blog-image">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js on AWS Amplify Guide" style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 40px; object-fit: contain; filter: invert(1);">
+                            <div class="blog-overlay">
+                                <div class="blog-actions">
+                                    <a href="https://cloudova.hashnode.dev/how-to-host-your-nextjs-website-on-aws-amplify-a-step-by-step-guide" target="_blank" class="blog-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <span class="blog-date">Dec 10, 2024</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>How to Host Your Next.js Website on AWS Amplify: A Step-by-Step Guide</h3>
+                            <p>Complete guide to deploying and hosting your Next.js applications on AWS Amplify with continuous deployment and optimization tips.</p>
+                            <div class="blog-tech">
+                                <span class="tech-tag">Next.js</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Amplify</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                        </div>
+                    </article>
 
-        <!-- Main JS File -->
-        <script src="script.js"></script>
-        <!-- FontAwesome JS File (Icon File) -->
-        <script src="https://kit.fontawesome.com/9917c00ec3.js" crossorigin="anonymous"></script>
-    </body>
+                    <!-- Add New Blog Template (Hidden by default) -->
+                    <!--
+                    <article class="blog-item">
+                        <div class="blog-image">
+                            <img src="[COVER_IMAGE_URL]" alt="[BLOG_TITLE]">
+                            <div class="blog-overlay">
+                                <div class="blog-actions">
+                                    <a href="[BLOG_URL]" target="_blank" class="blog-link">
+                                        <i class="fa-solid fa-external-link"></i>
+                                    </a>
+                                    <span class="blog-date">[DATE]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>[BLOG_TITLE]</h3>
+                            <p>[BLOG_DESCRIPTION]</p>
+                            <div class="blog-tech">
+                                <span class="tech-tag">[TAG1]</span>
+                                <span class="tech-tag">[TAG2]</span>
+                                <span class="tech-tag">[TAG3]</span>
+                            </div>
+                        </div>
+                    </article>
+                    -->
+                </div>
+
+                <div class="view-all-blogs">
+                    <a href="https://cloudova.hashnode.dev/" target="_blank" class="view-all-btn">
+                        <i class="fa-solid fa-arrow-right"></i>
+                        View All Blog Posts
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="content-section">
+            <h2 class="section-title">Education</h2>
+            <div class="section-divider"></div>
+
+            <div class="education-container">
+                <div class="education-timeline">
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Bachelor of Technology (Honours)</h3>
+                                <span class="education-year">Aug 2020 - May 2024</span>
+                            </div>
+                            <h4 class="university">University of Petroleum and Energy Studies (UPES), Dehradun</h4>
+                            <p class="degree-details">
+                                <strong>Major:</strong> Computer Science with Specialization in Cloud Computing and Virtualization Technology (CCVT)<br>
+                                <strong>Minor:</strong> DevOps and International Business<br>
+                                <strong>CGPA:</strong> 8.0/10
+                            </p>
+
+                            <div class="coursework">
+                                <h5>Relevant Coursework:</h5>
+                                <div class="course-grid">
+                                    <span class="course-item">Cloud Computing Architecture</span>
+                                    <span class="course-item">DevOps and CI/CD</span>
+                                    <span class="course-item">Data Structures & Algorithms</span>
+                                    <span class="course-item">Database Management Systems</span>
+                                    <span class="course-item">Software Engineering</span>
+                                    <span class="course-item">Computer Networks</span>
+                                    <span class="course-item">Operating Systems</span>
+                                    <span class="course-item">Virtualization Technologies</span>
+                                    <span class="course-item">Container Orchestration</span>
+                                    <span class="course-item">Infrastructure as Code</span>
+                                    <span class="course-item">Cloud Security</span>
+                                    <span class="course-item">Microservices Architecture</span>
+                                </div>
+                            </div>
+
+                            <div class="achievements">
+                                <h5>Key Achievements:</h5>
+                                <ul>
+                                    <li>Specialized in cutting-edge cloud technologies and DevOps practices</li>
+                                    <li>Hands-on experience with major cloud platforms (AWS, Azure, GCP)</li>
+                                    <li>Active participation in cloud computing and DevOps projects</li>
+                                    <li>Strong foundation in both technical and business aspects of technology</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-marker"></div>
+                        <div class="education-content">
+                            <div class="education-header">
+                                <h3>Higher Secondary Education</h3>
+                                <span class="education-year">2019 - 2020</span>
+                            </div>
+                            <h4 class="university">Senior Secondary School</h4>
+                            <p class="degree-details">
+                                <strong>Stream:</strong> Science (Physics, Chemistry, Mathematics)<br>
+                                <strong>Focus:</strong> Mathematics and Computer Science
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Learning Section -->
+                <div class="additional-learning">
+                    <h3>Continuous Learning & Development</h3>
+                    <div class="learning-grid">
+                        <div class="learning-item">
+                            <i class="fa-solid fa-users"></i>
+                            <h4>Technical Communities</h4>
+                            <p>Active member of cloud computing and DevOps communities, participating in discussions and knowledge sharing.</p>
+                        </div>
+
+                        <div class="learning-item">
+                            <i class="fa-solid fa-trophy"></i>
+                            <h4>Hands-on Projects</h4>
+                            <p>Continuously working on personal and academic projects to apply theoretical knowledge in practical scenarios.</p>
+                        </div>
+
+                        <div class="learning-item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <h4>Industry Experience</h4>
+                            <p>Gaining real-world experience through internships and collaborations with industry professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FontAwesome JS -->
+    <script src="https://kit.fontawesome.com/9917c00ec3.js" crossorigin="anonymous"></script>
+    <!-- Typed.JS -->
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <!-- Main JS -->
+    <script src="script.js?v=1.1"></script>
+</body>
 </html>
