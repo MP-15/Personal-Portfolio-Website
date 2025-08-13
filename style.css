@@ -140,7 +140,6 @@ body {
     object-fit: cover;
     object-position: 50% 30%;
     border: 3px solid var(--accent-color);
-    transform: rotate(-90deg);
 }
 
 .profile-name {
